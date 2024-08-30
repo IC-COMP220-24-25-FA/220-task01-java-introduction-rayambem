@@ -22,7 +22,20 @@ public class RectangleTest {
 
     @Test
     public void doubleSizeTest(){
-        throw new RuntimeException("Not implemented yet");
+        Rectangle testRectangle = new Rectangle(2, 6);
+        double initialArea = testRectangle.calcArea();
+        testRectangle.doubleSize();
+        assertEquals(initialArea * 4, testRectangle.calcArea(), 0.0001);
+
+        Rectangle testRectangle2 = new Rectangle(0.1, 2.222);
+        double initialArea2 = testRectangle2.calcArea();
+        testRectangle2.doubleSize();
+        assertEquals(initialArea2 * 4, testRectangle2.calcArea(), 0.0001);
+
+        Rectangle testRectangle3 = new Rectangle(0.00001, 0.001);
+        double initialArea3 = testRectangle3.calcArea();
+        testRectangle3.doubleSize();
+        assertEquals(initialArea3 * 4, testRectangle3.calcArea(), 0.00000001);
     }
 
     @Test
