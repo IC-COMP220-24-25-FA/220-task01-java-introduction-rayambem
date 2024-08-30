@@ -33,7 +33,8 @@ public class Circle {
      * @post doubles the size of this circle
      */
     public void doubleSize(){
-        throw new RuntimeException("Not implemented yet");
+        double newRadius = this.radius * 2;
+        this.radius = newRadius;
     }
 
     /**
