@@ -44,7 +44,7 @@ public class RectangleTest {
         assertEquals(6.324555, testRectangle.longestLineWithin(), 0.00001);
 
         Rectangle testRectangle2 = new Rectangle(0.1, 2.222);
-        assertEquals(0.10000004999, testRectangle2.longestLineWithin(), 0.00000000001);
+        assertEquals(2.22424908677, testRectangle2.longestLineWithin(), 0.00000000001);
 
         Rectangle testRectangle3 = new Rectangle(0.00001, 0.001);
         assertEquals(0.0010000499, testRectangle3.longestLineWithin(), 0.0000000001);
