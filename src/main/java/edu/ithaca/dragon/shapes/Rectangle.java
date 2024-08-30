@@ -32,7 +32,8 @@ public class Rectangle {
      * @return the longest line within this rectangle
      */
     public double longestLineWithin(){
-        throw new RuntimeException("Not implemented yet");
+        double longestLineWithin = Math.pow((this.length * this.length) + (this.width * this.width), 0.5);
+        return longestLineWithin;
     }
     
 }
