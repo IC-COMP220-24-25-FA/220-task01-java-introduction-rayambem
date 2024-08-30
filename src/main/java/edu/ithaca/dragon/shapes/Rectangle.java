@@ -13,7 +13,8 @@ public class Rectangle {
      * @return the area of this rectangle
      */
     public double calcArea(){
-       throw new RuntimeException("Not implemented yet");
+       double area = this.length * this.width;
+       return area;
     }
 
     /**
