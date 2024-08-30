@@ -19,5 +19,15 @@ public class RectangleTest {
         Rectangle testRectangle3 = new Rectangle(0.00001, 0.001);
         assertEquals(0.00000001, testRectangle3.calcArea(), 0.00000001);
     }
+
+    @Test
+    public void doubleSizeTest(){
+        throw new RuntimeException("Not implemented yet");
+    }
+
+    @Test
+    public void longestLineWithinTest(){
+        throw new RuntimeException("Not implemented yet");
+    }
     
 }
