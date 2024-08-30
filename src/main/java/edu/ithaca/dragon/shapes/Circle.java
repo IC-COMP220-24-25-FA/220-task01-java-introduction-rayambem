@@ -15,6 +15,13 @@ public class Circle {
     }
 
     /**
+     * @return the radius of this circle
+     */
+    public double getRadius(){
+        return this.radius;
+    }
+
+    /**
      * @return the area of this circle
      */
     public double calcArea(){
