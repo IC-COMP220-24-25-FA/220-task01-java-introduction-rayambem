@@ -14,7 +14,8 @@ public class Circle {
      * @return the area of this circle
      */
     public double calcArea(){
-        throw new RuntimeException("Not implemented yet");
+        double area = Math.PI * Math.pow(radius, 2);
+        return area;
     }
 
     /**
