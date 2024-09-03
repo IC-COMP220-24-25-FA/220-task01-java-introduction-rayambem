@@ -22,17 +22,17 @@ public class TriangleTest {
         Triangle testTriangle = new Triangle(2, 4);
         double initialArea = testTriangle.calcArea();
         testTriangle.doubleSize();
-        assertEquals(initialArea, testTriangle.doubleSize(), 0.0001);
+        assertEquals(initialArea * 4, testTriangle.calcArea(), 0.0001);
 
         Triangle testTriangle2 = new Triangle(5, 1);
         double initialArea2 = testTriangle2.calcArea();
         testTriangle2.doubleSize();
-        assertEquals(initialArea2, testTriangle2.doubleSize(), 0.0001);
+        assertEquals(initialArea2 * 4, testTriangle2.calcArea(), 0.0001);
 
         Triangle testTriangle3 = new Triangle(3.678, 10.452);
         double initialArea3 = testTriangle3.calcArea();
         testTriangle3.doubleSize();
-        assertEquals(initialArea3, testTriangle3.doubleSize(), 0.0001);
+        assertEquals(initialArea3 * 4, testTriangle3.calcArea(), 0.0001);
     };
 
     @Test
