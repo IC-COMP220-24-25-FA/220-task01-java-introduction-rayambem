@@ -13,7 +13,8 @@ public class Triangle {
      * @return the area of this triangle
     */
     public double calcArea(){
-        return 0.0;
+        double area = 0.5 * triangleHeight * triangleBase;
+        return area;
     }
 
     /**
