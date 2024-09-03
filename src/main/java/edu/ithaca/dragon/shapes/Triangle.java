@@ -21,6 +21,8 @@ public class Triangle {
      * @post double the size of the triangle
      */
     public void doubleSize(){
+        triangleHeight *= 2;
+        triangleBase *= 2;
     }
 
     /**
