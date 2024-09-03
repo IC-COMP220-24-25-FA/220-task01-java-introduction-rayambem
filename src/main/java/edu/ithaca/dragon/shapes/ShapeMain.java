@@ -5,6 +5,8 @@ import java.util.List;
 
 import java.util.Scanner;
 
+import java.util.stream.IntStream;
+
 
 public class ShapeMain {
     
@@ -19,5 +21,9 @@ public class ShapeMain {
             Rectangle newRectangle = new Rectangle((Math.random() * 50), (Math.random() * 50));
             rectangleList.add(newRectangle);
         }
+
+        IntStream.range(0, rectangleList.size()).forEach(i -> 
+            System.out.println(String.format("Area of rectangle %s : %.4f", i + 1, rectangleList.get(i).calcArea()))
+        );
     }
 }
