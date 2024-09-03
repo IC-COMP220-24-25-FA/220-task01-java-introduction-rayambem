@@ -9,20 +9,20 @@ public class Triangle {
         triangleBase = base;
     }
 
-    /*
+    /**
      * @return the area of this triangle
     */
     public double calcArea(){
         return 0.0;
     }
 
-    /*
+    /**
      * @post double the size of the triangle
      */
     public void doubleSize(){
     }
 
-    /*
+    /**
      * @return the longest line in the triangle (if right-angled)
      */
     public double longestLineWithin(){
