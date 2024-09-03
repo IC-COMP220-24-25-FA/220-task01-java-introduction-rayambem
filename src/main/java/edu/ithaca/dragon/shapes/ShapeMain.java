@@ -32,23 +32,32 @@ public class ShapeMain {
         double[] largestLineThrough = {0};
 
         IntStream.range(0, rectangleList.size()).forEach(i -> rectangleLoop(i, rectangleList, largestLineThrough));
-
         System.out.println(String.format("Longest line through all rectangles: %.4f" , largestLineThrough[0]));
 
-        System.out.println("Which rectangle's size would you like to double?");
         Scanner rectangleScanner = new Scanner(System.in);
 
-        String selectedRectangleString = rectangleScanner.nextLine();
-        int selectedRectangleInt = Integer.parseInt(selectedRectangleString);
-        Rectangle selectedRectangle = rectangleList.get(selectedRectangleInt - 1);
+        for (int inputSession = 0; inputSession < 5; inputSession++){
+            System.out.println("Which rectangle's size would you like to double?");
 
-        selectedRectangle.doubleSize();
+            String selectedRectangleString = rectangleScanner.nextLine();
+            int selectedRectangleInt = Integer.parseInt(selectedRectangleString);
+
+            while (selectedRectangleInt <=0 || selectedRectangleInt > rectangleList.size()) {
+                System.out.println("Invalid rectangle selection! Must be between 1 and 5!");
+                selectedRectangleString = rectangleScanner.nextLine();
+                selectedRectangleInt = Integer.parseInt(selectedRectangleString);
+            }
+
+            Rectangle selectedRectangle = rectangleList.get(selectedRectangleInt - 1);
+
+            selectedRectangle.doubleSize();
+
+            System.out.println();
+
+            IntStream.range(0, rectangleList.size()).forEach(i -> rectangleLoop(i, rectangleList, largestLineThrough));
+            System.out.println(String.format("Longest line through all rectangles: %.4f" , largestLineThrough[0]));
+        };
+
         rectangleScanner.close();
-
-        System.out.println();
-
-        IntStream.range(0, rectangleList.size()).forEach(i -> 
-        System.out.println(String.format("Area of rectangle %s : %.4f", i + 1, rectangleList.get(i).calcArea()))
-        );
     }
 }
