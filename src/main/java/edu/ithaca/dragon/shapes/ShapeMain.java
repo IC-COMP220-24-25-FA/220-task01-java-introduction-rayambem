@@ -35,6 +35,6 @@ public class ShapeMain {
 
         System.out.println(String.format("Longest line through all rectangles: %.4f" , largestLineThrough[0]));
 
-        );
+        
     }
 }
