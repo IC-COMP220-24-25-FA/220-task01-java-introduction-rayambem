@@ -29,6 +29,7 @@ public class Triangle {
      * @return the longest line in the triangle (assuming right-angled)
      */
     public double longestLineWithin(){
-        return 0.0;
+        double longestLine = Math.sqrt((triangleBase * triangleBase) + (triangleHeight * triangleHeight));
+        return longestLine;
     }
 }
