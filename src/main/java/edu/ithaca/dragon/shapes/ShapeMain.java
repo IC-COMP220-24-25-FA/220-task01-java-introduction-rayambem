@@ -9,6 +9,13 @@ import java.util.stream.IntStream;
 
 
 public class ShapeMain {
+    public static void rectangleLoop(int i, List<Rectangle> rectangleList, double[] largestLineThrough){
+        Rectangle currentRectangle = rectangleList.get(i);
+
+        System.out.println(String.format("Area of rectangle %s : %.4f", i + 1, currentRectangle.calcArea()));
+
+        largestLineThrough[0] += currentRectangle.longestLineWithin();
+    }
     
     public static void main(String[] args){
         //Make a list of 5 randomly-sized rectangles and print their area and the largest line that can be drawn through them
@@ -18,12 +25,16 @@ public class ShapeMain {
        List<Rectangle> rectangleList = new ArrayList<>();
 
         for (int i = 0; i < 5; i++){
-            Rectangle newRectangle = new Rectangle((Math.random() * 50), (Math.random() * 50));
+            Rectangle newRectangle = new Rectangle((Math.random() * 10), (Math.random() * 10));
             rectangleList.add(newRectangle);
         }
 
-        IntStream.range(0, rectangleList.size()).forEach(i -> 
-            System.out.println(String.format("Area of rectangle %s : %.4f", i + 1, rectangleList.get(i).calcArea()))
+        double[] largestLineThrough = {0};
+
+        IntStream.range(0, rectangleList.size()).forEach(i -> rectangleLoop(i, rectangleList, largestLineThrough));
+
+        System.out.println(String.format("Longest line through all rectangles: %.4f" , largestLineThrough[0]));
+
         );
     }
 }
