@@ -23,7 +23,7 @@ public class Triangle {
     }
 
     /*
-     * @return the longest line in the triangle
+     * @return the longest line in the triangle (if right-angled)
      */
     public double longestLineWithin(){
         return 0.0;
