@@ -35,6 +35,20 @@ public class ShapeMain {
 
         System.out.println(String.format("Longest line through all rectangles: %.4f" , largestLineThrough[0]));
 
-        
+        System.out.println("Which rectangle's size would you like to double?");
+        Scanner rectangleScanner = new Scanner(System.in);
+
+        String selectedRectangleString = rectangleScanner.nextLine();
+        int selectedRectangleInt = Integer.parseInt(selectedRectangleString);
+        Rectangle selectedRectangle = rectangleList.get(selectedRectangleInt - 1);
+
+        selectedRectangle.doubleSize();
+        rectangleScanner.close();
+
+        System.out.println();
+
+        IntStream.range(0, rectangleList.size()).forEach(i -> 
+        System.out.println(String.format("Area of rectangle %s : %.4f", i + 1, rectangleList.get(i).calcArea()))
+        );
     }
 }
