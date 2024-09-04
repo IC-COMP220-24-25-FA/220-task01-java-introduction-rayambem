@@ -47,4 +47,15 @@ public class FunctionPracticeTest {
         assertThrows(IllegalArgumentException.class, () -> FunctionPractice.calcSalePrice(-310, -22.22, -4));
     }
     
+    @Test
+    public void isGoodDogTest(){
+        assertEquals(true, FunctionPractice.isGoodDog(2, 0, false));
+        assertEquals(true, FunctionPractice.isGoodDog(4, 0, true));
+        assertEquals(false, FunctionPractice.isGoodDog(6, 0, false));
+        assertEquals(false, FunctionPractice.isGoodDog(9, 4, false));
+        
+        assertThrows(IllegalArgumentException.class, () -> FunctionPractice.isGoodDog(-6, 0, false));
+        assertThrows(IllegalArgumentException.class, () -> FunctionPractice.isGoodDog(0, -3, false));
+    }
+    
 }
