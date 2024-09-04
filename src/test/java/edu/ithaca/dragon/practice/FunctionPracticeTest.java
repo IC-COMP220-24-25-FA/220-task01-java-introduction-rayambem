@@ -53,6 +53,7 @@ public class FunctionPracticeTest {
         assertEquals(true, FunctionPractice.isGoodDog(4, 0, true));
         assertEquals(false, FunctionPractice.isGoodDog(6, 0, false));
         assertEquals(false, FunctionPractice.isGoodDog(9, 4, false));
+        assertEquals(true, FunctionPractice.isGoodDog(9, 8, false));
         
         assertThrows(IllegalArgumentException.class, () -> FunctionPractice.isGoodDog(-6, 0, false));
         assertThrows(IllegalArgumentException.class, () -> FunctionPractice.isGoodDog(0, -3, false));
