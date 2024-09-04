@@ -9,7 +9,7 @@ import java.util.stream.IntStream;
 
 
 public class ShapeMain {
-    public static void rectangleLoop(int i, List<Rectangle> rectangleList, double[] largestLineThrough){
+    public static void rectanglePrintingLoop(int i, List<Rectangle> rectangleList, double[] largestLineThrough){
         Rectangle currentRectangle = rectangleList.get(i);
 
         System.out.println(String.format("Area of rectangle %s : %.4f", i + 1, currentRectangle.calcArea()));
@@ -31,7 +31,7 @@ public class ShapeMain {
 
         double[] largestLineThrough = {0};
 
-        IntStream.range(0, rectangleList.size()).forEach(i -> rectangleLoop(i, rectangleList, largestLineThrough));
+        IntStream.range(0, rectangleList.size()).forEach(i -> rectanglePrintingLoop(i, rectangleList, largestLineThrough));
         System.out.println(String.format("Longest line through all rectangles: %.4f" , largestLineThrough[0]));
 
         Scanner rectangleScanner = new Scanner(System.in);
@@ -54,7 +54,7 @@ public class ShapeMain {
 
             System.out.println();
 
-            IntStream.range(0, rectangleList.size()).forEach(i -> rectangleLoop(i, rectangleList, largestLineThrough));
+            IntStream.range(0, rectangleList.size()).forEach(i -> rectanglePrintingLoop(i, rectangleList, largestLineThrough));
             System.out.println(String.format("Longest line through all rectangles: %.4f" , largestLineThrough[0]));
         };
 
