@@ -28,7 +28,22 @@ public class FunctionPracticeTest {
 
     @Test
     public void calcSalePriceTest(){
-        fail("Not implemented yet");
+        // Regular case
+        assertEquals(70, FunctionPractice.calcSalePrice(100, 50, 20));
+        assertEquals(80.6, FunctionPractice.calcSalePrice(70, 10, 12));
+        assertEquals(42.071, FunctionPractice.calcSalePrice(58.92, 32.5, 2.3));
+
+        // Full discount, no discount
+        assertEquals(3.66, FunctionPractice.calcSalePrice(376.2, 100, 3.66));
+
+        // Zero price
+        assertEquals(12, FunctionPractice.calcSalePrice(0, 25, 12));
+
+        // Negative values
+        assertThrows(IllegalArgumentException.class, () -> FunctionPractice.calcSalePrice(-34, 22, 7.3));
+        assertThrows(IllegalArgumentException.class, () -> FunctionPractice.calcSalePrice(140, -20, 3));
+        assertThrows(IllegalArgumentException.class, () -> FunctionPractice.calcSalePrice(650, 18, -30));
+        assertThrows(IllegalArgumentException.class, () -> FunctionPractice.calcSalePrice(-310, -22.22, -4));
     }
     
 }
