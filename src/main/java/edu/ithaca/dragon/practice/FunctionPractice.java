@@ -1,5 +1,6 @@
 package edu.ithaca.dragon.practice;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class FunctionPractice {
@@ -9,7 +10,22 @@ public class FunctionPractice {
      * @throws IllegalArgumentException if any of the numbers is negative
      */
     public static int largestOfThree(int first, int second, int third){
-        throw new RuntimeException("Not Implemented");
+        if (first < 0 || second < 0 || third < 0){
+            throw new IllegalArgumentException("Invalid arguments! Numbers must be positive.");
+        }
+
+        int largestNumber = first;
+
+        List<Integer> numbersList = new ArrayList<>();
+        numbersList.add(first);
+        numbersList.add(second);
+        numbersList.add(third);
+
+        for (int numberValue : numbersList){
+            largestNumber = Math.max(numberValue, largestNumber);
+        }
+
+        return largestNumber;
     }
     
     /**
