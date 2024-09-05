@@ -49,11 +49,11 @@ public class FunctionPracticeTest {
     
     @Test
     public void isGoodDogTest(){
-        assertEquals(true, FunctionPractice.isGoodDog(2, 0, false));
-        assertEquals(true, FunctionPractice.isGoodDog(4, 0, true));
-        assertEquals(false, FunctionPractice.isGoodDog(6, 0, false));
-        assertEquals(false, FunctionPractice.isGoodDog(9, 4, false));
-        assertEquals(true, FunctionPractice.isGoodDog(9, 8, false));
+        assertTrue(FunctionPractice.isGoodDog(2, 0, false));
+        assertTrue(FunctionPractice.isGoodDog(4, 0, true));
+        assertFalse(FunctionPractice.isGoodDog(6, 0, false));
+        assertFalse(FunctionPractice.isGoodDog(9, 4, false));
+        assertTrue(FunctionPractice.isGoodDog(9, 8, false));
         
         assertThrows(IllegalArgumentException.class, () -> FunctionPractice.isGoodDog(-6, 0, false));
         assertThrows(IllegalArgumentException.class, () -> FunctionPractice.isGoodDog(0, -3, false));
