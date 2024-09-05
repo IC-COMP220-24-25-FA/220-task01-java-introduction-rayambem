@@ -6,6 +6,10 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import org.junit.jupiter.api.Test;
 
 public class FunctionPracticeTest {
@@ -59,4 +63,24 @@ public class FunctionPracticeTest {
         assertThrows(IllegalArgumentException.class, () -> FunctionPractice.isGoodDog(0, -3, false));
     }
     
+    @Test
+    public void findFirstLargestTest(){
+        // Regular list
+        List<Integer> testNumbers = new ArrayList<>(Arrays.asList(1, 3, 5, 2, 4));
+        assertEquals(2, FunctionPractice.findFirstLargest(testNumbers));
+
+        // With empty list
+        List<Integer> testNumbers2 = new ArrayList<>();
+        assertEquals(-1, FunctionPractice.findFirstLargest(testNumbers2));
+    
+        // With a repeated value
+        List<Integer> testNumbers3 = new ArrayList<>(Arrays.asList(1, 2, 4, 10, 39, 2, 0));
+        assertEquals(5, FunctionPractice.findFirstLargest(testNumbers3));
+
+        // With only one value
+        List<Integer> testNumbers4 = new ArrayList<>(Arrays.asList(438));
+        assertEquals(0, FunctionPractice.findFirstLargest(testNumbers4));
+
+    }
+
 }
