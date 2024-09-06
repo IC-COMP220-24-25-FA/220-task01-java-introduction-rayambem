@@ -68,7 +68,7 @@ public class FunctionPractice {
             return -1;
         }
 
-        int[] largestNumber = {0};
+        int[] largestNumber = {Integer.MIN_VALUE};
         int[] largestNumberIndex = {0};
        
         IntStream.range(0, numbers.size()).forEach((i) -> 
