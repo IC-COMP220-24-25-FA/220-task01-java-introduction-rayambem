@@ -37,10 +37,11 @@ public class Rectangle implements Shape{
     }
     
     /**
-     * @return
+     * @return string representation of rectangle essentials
      */
     public String toString(){
-        throw new RuntimeException("Not implemented");
+        String rectangleString = String.format("Rectangle dimensions (l x w): %.2f x %.2f\nRectangle area: %.2f", this.length, this.width, this.calcArea());
+        return rectangleString;
     }
 
 }

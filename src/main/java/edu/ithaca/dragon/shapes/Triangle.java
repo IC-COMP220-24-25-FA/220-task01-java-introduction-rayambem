@@ -34,10 +34,11 @@ public class Triangle implements Shape{
     }
 
     /**
-     * @return
+     * @return string representation of rectangle essentials
      */
     public String toString(){
-        throw new RuntimeException("Not implemented");
+        String triangleString = String.format("Triangle dimensions (b x h): %.2f x %.2f\nRectangle area: %.2f", triangleBase, triangleHeight, this.calcArea());
+        return triangleString;
     }
 
 }

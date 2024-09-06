@@ -46,10 +46,11 @@ public class Circle implements Shape {
     }
 
     /**
-     * @return
+     * @return string representation of circle essentials
      */
     public String toString(){
-        throw new RuntimeException("Not implemented");
+        String circleString = String.format("Circle radius: %.2f\nCircle area: %.2f", this.radius, this.calcArea());
+        return circleString;
     }
 
 }
