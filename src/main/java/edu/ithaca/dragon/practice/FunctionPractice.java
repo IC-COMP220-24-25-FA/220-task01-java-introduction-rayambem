@@ -68,6 +68,7 @@ public class FunctionPractice {
             return -1;
         }
 
+        // WHY COULDNT I ACCESS LargestNumber FROM THE IF BLOCK WHILE IT WAS AN INTEGER? WHY DID I HAVE TO CHANGE IT TO AN ARRAY??
         int[] largestNumber = {Integer.MIN_VALUE};
         int[] largestNumberIndex = {0};
        
