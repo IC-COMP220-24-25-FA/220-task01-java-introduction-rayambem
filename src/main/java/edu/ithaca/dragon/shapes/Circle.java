@@ -44,4 +44,12 @@ public class Circle {
         double longestLineWithin = this.radius * 2;
         return longestLineWithin;
     }
+
+    /**
+     * @return
+     */
+    public String toString(){
+        throw new RuntimeException("Not implemented");
+    }
+    
 }

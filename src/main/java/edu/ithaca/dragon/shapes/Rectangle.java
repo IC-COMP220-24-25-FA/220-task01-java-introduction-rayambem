@@ -36,4 +36,11 @@ public class Rectangle {
         return longestLineWithin;
     }
     
+    /**
+     * @return
+     */
+    public String toString(){
+        throw new RuntimeException("Not implemented");
+    }
+    
 }

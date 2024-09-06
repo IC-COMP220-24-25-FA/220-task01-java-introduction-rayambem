@@ -32,4 +32,12 @@ public class Triangle {
         double longestLine = Math.sqrt((triangleBase * triangleBase) + (triangleHeight * triangleHeight));
         return longestLine;
     }
+
+    /**
+     * @return
+     */
+    public String toString(){
+        throw new RuntimeException("Not implemented");
+    }
+    
 }
