@@ -37,7 +37,7 @@ public class Triangle implements Shape{
      * @return string representation of rectangle essentials
      */
     public String toString(){
-        String triangleString = String.format("Triangle dimensions (b x h): %.2f x %.2f\nRectangle area: %.2f", triangleBase, triangleHeight, this.calcArea());
+        String triangleString = String.format("Triangle dimensions (b x h): %.2f x %.2f\nTriangle area: %.2f\n", triangleBase, triangleHeight, this.calcArea());
         return triangleString;
     }
 

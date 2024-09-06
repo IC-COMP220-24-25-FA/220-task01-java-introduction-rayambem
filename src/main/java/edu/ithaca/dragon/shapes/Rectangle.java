@@ -40,7 +40,7 @@ public class Rectangle implements Shape{
      * @return string representation of rectangle essentials
      */
     public String toString(){
-        String rectangleString = String.format("Rectangle dimensions (l x w): %.2f x %.2f\nRectangle area: %.2f", this.length, this.width, this.calcArea());
+        String rectangleString = String.format("Rectangle dimensions (l x w): %.2f x %.2f\nRectangle area: %.2f\n", this.length, this.width, this.calcArea());
         return rectangleString;
     }
 

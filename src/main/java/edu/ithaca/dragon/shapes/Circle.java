@@ -49,7 +49,7 @@ public class Circle implements Shape {
      * @return string representation of circle essentials
      */
     public String toString(){
-        String circleString = String.format("Circle radius: %.2f\nCircle area: %.2f", this.radius, this.calcArea());
+        String circleString = String.format("Circle radius: %.2f\nCircle area: %.2f\n", this.radius, this.calcArea());
         return circleString;
     }
 
