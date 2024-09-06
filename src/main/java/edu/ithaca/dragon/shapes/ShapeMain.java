@@ -18,6 +18,24 @@ public class ShapeMain {
     }
     
     public static void main(String[] args){
+        List<Shape> shapesList = new ArrayList<>();
+
+        for(int i = 0; i < 10; i++){
+            int shapePicker = (int) Math.round(Math.random() * 2);
+
+            if (shapePicker == 0){
+                shapesList.add(new Circle(Math.random() * 10));
+                System.out.println(shapesList.get(i).toString());
+            } else if (shapePicker == 1){
+                shapesList.add(new Rectangle((Math.random() * 10), (Math.random() * 10)));
+                System.out.println(shapesList.get(i).toString());
+            } else if (shapePicker == 2){
+                shapesList.add(new Triangle((Math.random() * 10), (Math.random() * 10)));
+                System.out.println(shapesList.get(i).toString());
+            }
+        }
+
+
         //Make a list of 5 randomly-sized rectangles and print their area and the largest line that can be drawn through them
         //Allow the user to choose one, double the size of that one, and print them all again
         //Use a loop to repeat the process 5 times
