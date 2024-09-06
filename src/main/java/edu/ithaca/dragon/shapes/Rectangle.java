@@ -1,6 +1,6 @@
 package edu.ithaca.dragon.shapes;
 
-public class Rectangle {
+public class Rectangle implements Shape{
     private double length;
     private double width;
 
@@ -36,4 +36,12 @@ public class Rectangle {
         return longestLineWithin;
     }
     
+    /**
+     * @return string representation of rectangle essentials
+     */
+    public String toString(){
+        String rectangleString = String.format("Rectangle dimensions (l x w): %.2f x %.2f\nRectangle area: %.2f\n", this.length, this.width, this.calcArea());
+        return rectangleString;
+    }
+
 }
