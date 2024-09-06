@@ -108,7 +108,7 @@ public class FunctionPractice {
 
     /**
      * @return the string that has contains the most occurences of the given letter
-     * @throws IllegalArgumentException when letter cannot be found in string
+     * @throws IllegalArgumentException when letter cannot be found in any strings
      */
     public static String findFirstMostOccurencesOfLetter(List<String> words, char letter){
         throw new RuntimeException("Not Implemented");
