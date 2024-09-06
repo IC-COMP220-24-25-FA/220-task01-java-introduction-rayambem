@@ -111,7 +111,27 @@ public class FunctionPractice {
      * @throws IllegalArgumentException when letter cannot be found in any strings
      */
     public static String findFirstMostOccurencesOfLetter(List<String> words, char letter){
-        throw new RuntimeException("Not Implemented");
+        int maxCharCount = 0;
+        String maxCharString = "";
+
+        for (String word : words){
+            int charCount = 0;
+            for (char wordChar : word.toCharArray()){
+                if(wordChar == letter){
+                    charCount++;
+                }
+            }
+            if(charCount > maxCharCount){
+                maxCharCount = charCount;
+                maxCharString = word;
+            }
+        }
+
+        if(maxCharCount == 0){
+            throw new IllegalArgumentException("Character could not be found in any strings included!");
+        }
+
+        return maxCharString;
     }
 
 
