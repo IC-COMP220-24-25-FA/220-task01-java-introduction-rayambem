@@ -88,7 +88,22 @@ public class FunctionPractice {
      * If the largest number occurs more than once, return the index of the last occurence.
      */
     public static int findLastLargest(List<Integer> numbers){
-        throw new RuntimeException("Not Implemented");
+        if(numbers.size() < 1){
+            return -1;
+        }
+
+        int[] largestNumber = {Integer.MIN_VALUE};
+        int[] largestNumberIndex = {0};
+       
+        IntStream.range(0, numbers.size()).forEach((i) -> 
+            {if(numbers.get(i) >= largestNumber[0]){
+                largestNumber[0] = numbers.get(i);
+                largestNumberIndex[0] = i;
+                }
+            }
+        );
+
+        return largestNumberIndex[0];
     }
 
     /**
