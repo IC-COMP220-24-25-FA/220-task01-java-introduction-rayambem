@@ -1,6 +1,6 @@
 package edu.ithaca.dragon.shapes;
 
-public class Triangle {
+public class Triangle implements Shape{
     private double triangleHeight;
     private double triangleBase;
 
@@ -39,5 +39,5 @@ public class Triangle {
     public String toString(){
         throw new RuntimeException("Not implemented");
     }
-    
+
 }

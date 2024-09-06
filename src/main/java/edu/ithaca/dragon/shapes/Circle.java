@@ -1,6 +1,6 @@
 package edu.ithaca.dragon.shapes;
 
-public class Circle {
+public class Circle implements Shape {
     private double radius;
 
     /**
@@ -51,5 +51,5 @@ public class Circle {
     public String toString(){
         throw new RuntimeException("Not implemented");
     }
-    
+
 }
