@@ -20,6 +20,7 @@ public class ShapeMain {
     public static void main(String[] args){
         List<Shape> shapesList = new ArrayList<>();
 
+        // Creating 10 random shapes for shapesList
         for(int i = 0; i < 10; i++){
             int shapePicker = (int) Math.round(Math.random() * 2);
 
@@ -33,6 +34,13 @@ public class ShapeMain {
                 shapesList.add(new Triangle((Math.random() * 10), (Math.random() * 10)));
                 System.out.println(String.format("%d. %s", i + 1, shapesList.get(i).toString()));
             }
+        }
+
+        // Doubling all shape sizes and printing then strings again
+        int shapeCount = 0;
+        for (Shape shape : shapesList) {
+            shape.doubleSize();
+            System.out.println(String.format("%d. %s", shapeCount += 1, shape.toString()));
         }
 
 
