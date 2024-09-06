@@ -25,13 +25,13 @@ public class ShapeMain {
 
             if (shapePicker == 0){
                 shapesList.add(new Circle(Math.random() * 10));
-                System.out.println(shapesList.get(i).toString());
+                System.out.println(String.format("%d. %s", i + 1, shapesList.get(i).toString()));
             } else if (shapePicker == 1){
                 shapesList.add(new Rectangle((Math.random() * 10), (Math.random() * 10)));
-                System.out.println(shapesList.get(i).toString());
+                System.out.println(String.format("%d. %s", i + 1, shapesList.get(i).toString()));
             } else if (shapePicker == 2){
                 shapesList.add(new Triangle((Math.random() * 10), (Math.random() * 10)));
-                System.out.println(shapesList.get(i).toString());
+                System.out.println(String.format("%d. %s", i + 1, shapesList.get(i).toString()));
             }
         }
 
