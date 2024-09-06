@@ -110,4 +110,31 @@ public class FunctionPracticeTest {
         assertEquals(6, FunctionPractice.findLastLargest(testNumbers5));
     }
 
+    @Test
+    public void findFirstMostOccurencesOfLetterTest(){
+        // Regular list
+        List<String> testStrings = new ArrayList<>(Arrays.asList("molly", "pompom", "mamma mia!"));
+        assertEquals(testStrings.get(2), FunctionPractice.findFirstMostOccurencesOfLetter(testStrings, 'm'));
+
+        // Empty list
+        List<String> testStrings2 = new ArrayList<>();
+        assertThrows(IllegalArgumentException.class , () -> FunctionPractice.findFirstMostOccurencesOfLetter(testStrings2, 'm'));
+        
+        // With repeated string
+        List<String> testStrings3 = new ArrayList<>(Arrays.asList("plantain", "queen", "poppy", "poppy", "seafood"));
+        assertEquals(testStrings3.get(2), FunctionPractice.findFirstMostOccurencesOfLetter(testStrings3, 'p'));
+
+        // With only one string
+        List<String> testStrings4 = new ArrayList<>(Arrays.asList("crococrocodile"));
+        assertEquals(testStrings4.get(0), FunctionPractice.findFirstMostOccurencesOfLetter(testStrings4, 'c'));
+
+        // With multiple different strings containing same amount of char
+        List<String> testStrings5 = new ArrayList<>(Arrays.asList("kelly" ,"chinny" , "nonyelu", "nina"));
+        assertEquals(testStrings5.get(1), FunctionPractice.findFirstMostOccurencesOfLetter(testStrings5, 'n'));
+
+        // With no strings containing required char
+        List<String> testStrings6 = new ArrayList<>(Arrays.asList("kelly" ,"chinny" , "nonyelu", "nina"));
+        assertThrows(IllegalArgumentException.class , () -> FunctionPractice.findFirstMostOccurencesOfLetter(testStrings6, 'x'));
+    }
+
 }
