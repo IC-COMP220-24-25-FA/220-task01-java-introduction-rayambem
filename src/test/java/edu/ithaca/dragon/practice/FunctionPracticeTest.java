@@ -73,9 +73,9 @@ public class FunctionPracticeTest {
         List<Integer> testNumbers2 = new ArrayList<>();
         assertEquals(-1, FunctionPractice.findFirstLargest(testNumbers2));
     
-        // With a repeated value
-        List<Integer> testNumbers3 = new ArrayList<>(Arrays.asList(1, 2, 4, 10, 39, 2, 0));
-        assertEquals(5, FunctionPractice.findFirstLargest(testNumbers3));
+        // With repeated value
+        List<Integer> testNumbers3 = new ArrayList<>(Arrays.asList(1, 39, 4, 10, 39, 2, 0));
+        assertEquals(1, FunctionPractice.findFirstLargest(testNumbers3));
 
         // With only one value
         List<Integer> testNumbers4 = new ArrayList<>(Arrays.asList(438));
